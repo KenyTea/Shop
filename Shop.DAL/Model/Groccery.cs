@@ -20,6 +20,15 @@ namespace Shop.DAL.Model
 
         public List<Product> Products { get; set; }
 
+        public Product this[int QR]   //
+        {
+            get
+            {
+                return Products.FirstOrDefault(o => o.Barcode == QR);
+
+            }
+        }
+
         public void Info()
         {
             Console.WriteLine("{0} \n {1} ({2})", Name, Addtess, Phone);

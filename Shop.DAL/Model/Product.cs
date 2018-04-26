@@ -77,6 +77,25 @@ namespace Shop.DAL.Model
             }
         }
 
+        public static Product operator >(Product A, Product B)   // перегрузка
+        {
+            if (A.Price > B.Price)
+                return A;
+
+            else return B;
+        }
+
+        public static Product operator <(Product A, Product B)
+        {
+            if (A.Price < B.Price)
+                return B;
+
+            else
+                return A;
+        }
+
+      
+
         public void PrintInfo()
         {
             Console.WriteLine("{0} - {1} - ({2} - {3}) - {4} {5}", Barcode, Name, DateOfProduction, ExpiredTime, Price, Cur);

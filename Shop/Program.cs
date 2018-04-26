@@ -14,11 +14,26 @@ namespace Shop
             ServiceProduct q = new ServiceProduct();
             List<Groccery> w = q.GenerateShop();
 
-            foreach (Groccery item in w)
+            foreach (Groccery item in w.OrderBy(o => o.Products.Count()))
             {
                 item.Info();
             }
 
+
+
+            Console.WriteLine("Enter Shop");
+            string t = Console.ReadLine();
+
+           // Console.Clear();
+
+            Groccery yt = w.FirstOrDefault(o => o.Name == t);
+            if (yt != null)
+            {
+                Console.WriteLine("Enter QR");
+                int temp = Int32.Parse(Console.ReadLine());
+                Product findProduct = yt[temp];
+                findProduct.PrintInfo();
+            }
         }
     }
 }
