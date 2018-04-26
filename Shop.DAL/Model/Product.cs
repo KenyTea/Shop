@@ -38,7 +38,7 @@ namespace Shop.DAL.Model
             }
         }
 
-        public Currency Cur { get; set; }
+        public Currency Cur { get; set; } = new Currency();
 
         public int Barcode { get; set; }
 
