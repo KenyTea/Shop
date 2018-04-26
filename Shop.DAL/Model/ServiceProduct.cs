@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shop.DAL.Model
 {
-    class ServiceProduct
+   public class ServiceProduct
     {
         private Random Rand = new Random();
 
@@ -18,7 +18,7 @@ namespace Shop.DAL.Model
                 p.Barcode = Rand.Next(10000, 30000);
                 p.Cur.CurCode = 398;
                 p.Cur.CurName = "KZT";
-                p.DateOfProduction = DateTime.Now.AddDays(Rand.Next(0, -1000));
+                p.DateOfProduction = DateTime.Now.AddDays(-Rand.Next(0, 1000));
                 p.ExpiredDay = Rand.Next(1, 10);
                 p.ExpiredTime = DateTime.Now.AddDays(Rand.Next(0, 20));
                 p.Name = string.Format("Product {0}", Rand.Next());

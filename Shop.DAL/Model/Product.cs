@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shop.DAL.Model
 {
-    class Product
+    public class Product
     {
         public class Currency
         {

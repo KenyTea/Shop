@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Shop.DAL.Model
 {
-    class Groccery
+     public class Groccery
     {
 
-        public Groccery()
+       public Groccery()
         {
             Products = new List<Product>();
         }
